@@ -1,3 +1,6 @@
 require_relative 'bool'
 require_relative 'enum'
 require_relative 'flags'
+require_relative 'mac_address'
+require_relative 'ipv4_address'
+require_relative 'ipv6_address'
