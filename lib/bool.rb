@@ -8,6 +8,6 @@ class Bool < BinData::Primitive
   end
 
   def set(value)
-    self.bool == value ? 1 : 0
+    self.bool = value ? 1 : 0
   end
 end
