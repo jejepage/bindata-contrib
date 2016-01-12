@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe 'Enum8, Enum16, Enum32' do
+describe 'BinData::Enum8, BinData::Enum16, BinData::Enum32' do
   before(:all) do
     class MyClass < BinData::Record
       endian :big

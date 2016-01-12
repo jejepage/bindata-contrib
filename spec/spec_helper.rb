@@ -1,1 +1,1 @@
-require_relative '../lib/bindata-contrib'
+require 'bindata-contrib'

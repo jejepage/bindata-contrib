@@ -1,4 +1,5 @@
-require_relative 'lib/bindata-contrib/version'
+$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+require 'bindata-contrib/version'
 
 Gem::Specification.new do |s|
   s.name         = 'bindata-contrib'
@@ -16,5 +17,6 @@ Gem::Specification.new do |s|
   s.license      = 'MIT'
 
   s.add_runtime_dependency 'bindata', '~> 2.1'
+  s.add_development_dependency 'rake', '~> 10.4'
   s.add_development_dependency 'rspec', '~> 3.2'
 end

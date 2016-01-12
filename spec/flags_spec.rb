@@ -1,8 +1,6 @@
-require 'spec_helper'
-
-describe 'Flags8, Flags16, Flags32' do
+describe 'BinData::Flags8, BinData::Flags16, BinData::Flags32' do
   before(:all) do
-    class MyClass < BinData::Record
+    class MyClass2 < BinData::Record
       endian :big
       flags8 :flags8, list: [:a, :b, :c]
       flags16 :flags16, list: [:d, :e, :f]
@@ -11,7 +9,7 @@ describe 'Flags8, Flags16, Flags32' do
   end
 
   it 'should read binary' do
-    cls = MyClass.read [
+    cls = MyClass2.read [
       3,
       0, 4,
       0, 0, 0, 7
@@ -21,13 +19,13 @@ describe 'Flags8, Flags16, Flags32' do
     expect(cls.flags32).to eq([:g, :h, :i])
   end
   it 'should initialize with default values' do
-    cls = MyClass.new
+    cls = MyClass2.new
     expect(cls.flags8).to be_empty
     expect(cls.flags16).to be_empty
     expect(cls.flags32).to be_empty
   end
   it 'should initialize with some values' do
-    cls = MyClass.new(
+    cls = MyClass2.new(
       flags8: [:c],
       flags16: [:d, :e]
     )
