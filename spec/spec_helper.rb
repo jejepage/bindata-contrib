@@ -1,3 +1,3 @@
-require 'bindata-contrib'
 require 'coveralls'
 Coveralls.wear!
+require 'bindata-contrib'
